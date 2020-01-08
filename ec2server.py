@@ -50,14 +50,12 @@ def listfiles(bucket):
     return jsonify(keys)
 
 @app.route("/deletefile/<bucket>/<key>", methods=['GET'])
-def deletefile(bucket,key):
+def deletefile(bucket, key):
     client = boto3.client('s3')
-    try:
-        client.delete_object(Bucket=bucket, Key=key)
-        return("Archivo eliminado")
-    except: botocore.exceptions.Clienterror as e:
-        return("error")
+    client.delete_object(Bucket=bucket, Key=key)
+    return("Archivo eliminado")
 
 
-app.run(host = '0.0.0.0')
+
+app.run(host ='0.0.0.0')
 
