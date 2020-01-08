@@ -1,5 +1,7 @@
 # challenge_meli
-Script para subir/descargar/borrar archivos de s3 desde una instancia de ec2 o cliente usando curl desde la consola con el puerto 5000                                       
+Script para subir/descargar/borrar archivos de s3 desde una instancia de ec2 o cliente usando curl desde la consola con el puerto 5000. 
+Este script funciona como un proxy entre Amazon S3 y el cliente. Esta hosteado en una instancia EC2, usando Flask y Gunicorn como WSGI
+
 
 **instrucciones**:  
 **descargar archivo** : **curl http://ec2-34-229-160-124.compute-1.amazonaws.com:5000/downloads3/tu_bucket/tu_key**
