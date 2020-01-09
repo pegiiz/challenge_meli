@@ -15,3 +15,11 @@ Para saber el path : realpath *archivo*
 El endpoint */listfiles/tu_bucket* devolvera  un json listando todos los objetos en el bucket especificado 
 
 **borrar archivos** : **curl http://ec2-34-229-160-124.compute-1.amazonaws.com:5000/deletefile/tu_bucket/tu_key**
+
+# features a implementar  
+
+**seguridad**: Algo que me quedo pendiente fue poder habilitar el server para que reciba requests desde el puerto 80 con un proxy como nginx, y tambien hacer la certificacion de https.    
+
+Otro feature de seguridad a futuro podria ser implementar un sistema de autenticacion, que la app tenga una base de datos con usuarios y obligue al cliente a logear con sus credenciales antes de hacer cualquier cosa.
+
+**funcionalidades de la app**: mejorar la funcion de subir archivos,ya que esta solo puede subir de a un solo archivo y es muy poco practico. para que se puedan subir carpetas, o archivos en cantidad. podria ser un nuevo endpoint que abra una pagina web y permita arrastrar archivos o poder seleccionar muchos.
